@@ -1,0 +1,135 @@
+@import 'config';
+@media (max-width: 768px) {
+  #header {
+    &-home {
+      height: 30rem;
+
+      .header-content {
+        padding-top: 15%;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  #header {
+    &-home {
+      height: 10rem;
+      background-position: 20% 30%;
+
+      .header-content {
+        display: none;
+      }
+    }
+    &-inner {
+      height: 10rem;
+    }
+  }
+  #logo {
+    display: block;
+    margin: 0 auto;
+  }
+  #main-nav {
+    display: grid;
+    grid-gap: 0.1rem;
+    grid-template-columns: none;
+    grid-template-rows: repeat(2, 1fr);
+
+    ul {
+      li {
+        padding: 1rem;
+      }
+    }
+  }
+  #home {
+    &-specialize {
+      .specials {
+        grid-template-columns: 1fr;
+      }
+    }
+    &-stats {
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+    &-process {
+      .process {
+        grid-template-columns: 1fr;
+
+        > div {
+          border-bottom: 5px dotted $medium-color;
+
+          &:last-child {
+            border: none;
+          }
+
+          > i {
+            margin: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  #about {
+    &-info {
+      grid-template-areas:
+        'bioimg'
+        'bio'
+        'aw1'
+        'aw2'
+        'aw3';
+    }
+    &-logos {
+      grid-template-columns: 1fr;
+      img {
+        height: auto;
+        width: auto;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+    &-testimonials {
+      grid-template-columns: 1fr;
+    }
+  }
+  .items {
+    grid-template-columns: 1fr;
+    padding: 0.5rem;
+    margin: 0.5rem;
+  }
+  #contact-form {
+    form {
+      width: 100%;
+      margin: auto;
+    }
+
+    .text-input {
+      width: 100%;
+    }
+  }
+
+  #main-footer {
+    .footer-content {
+      grid-template-columns: none;
+      grid-template-rows: 1fr;
+      grid-gap: 0.1rem;
+      height: auto;
+
+      .social-media-icons {
+        text-align: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-height: 580px) {
+  #header {
+    &-home {
+      .header-content {
+        padding-top: 5%;
+      }
+    }
+  }
+}

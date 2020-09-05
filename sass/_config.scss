@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@500;800&display=swap');
+// Setting Variables
+$main-color: #ffbc00;
+$light-color: #f4f4f4;
+$medium-color: #aaa;
+$dark-color: #333;
+$site-width: 1280px;
+$bg-image: url('../img/showcase.jpg');
+
+@mixin transition($transition-property) {
+  transition: $transition-property;
+  -webkit-transition: $transition-property;
+  -moz-transition: $transition-property;
+  -ms-transition: $transition-property;
+  -o-transition: $transition-property;
+}
+
+@mixin border-radius($border-radius-property) {
+  border-radius: $border-radius-property;
+  -webkit-border-radius: $border-radius-property;
+  -moz-border-radius: $border-radius-property;
+  -ms-border-radius: $border-radius-property;
+  -o-border-radius: $border-radius-property;
+}
+
+@function getTextColor($background-color) {
+  @if (lightness($background-color) >50) {
+    @return $dark-color;
+  } @else {
+    @return $light-color;
+  }
+}
+
+@mixin appearance {
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+@mixin progress-bar {
+  progress::-webkit-progress-bar,
+  progress {
+    background: #fff;
+    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2) inset;
+    @include border-radius(10px);
+    width: 100%;
+  }
+}
+
+@mixin progress-value {
+  progress::-webkit-progress-value,
+  progress::-moz-progress-bar {
+    background-color: $main-color;
+    @include border-radius(10px);
+  }
+}
+
+@mixin transform($transform-properties) {
+  transform: $transform-properties;
+  $-webkit-transform: $transform-properties;
+  -moz-transform: $transform-properties;
+  -ms-transform: $transform-properties;
+  -o-transform: $transform-properties;
+  -webkit-transform: $transform-properties;
+}
