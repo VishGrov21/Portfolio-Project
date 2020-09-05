@@ -49,9 +49,15 @@ $bg-image: url('../img/showcase.jpg');
 }
 
 @mixin progress-value {
-  progress::-webkit-progress-value,
   progress::-moz-progress-bar {
     background-color: $main-color;
+    color: $main-color;
+    @include border-radius(10px);
+  }
+
+  progress[value]::-webkit-progress-value {
+    background-color: $main-color;
+    color: $main-color;
     @include border-radius(10px);
   }
 }

@@ -200,8 +200,8 @@
     progress {
       @include appearance;
     }
-    @include progress-bar;
     @include progress-value;
+    @include progress-bar;
   }
 
   &-logos {
