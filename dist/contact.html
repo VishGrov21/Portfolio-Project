@@ -26,18 +26,41 @@
         <h2 class="section-title">Contact Me</h2>
         <div class="bottom-line"></div>
         <p class="lead">Here is how you can reach me</p>
-        <form action="" class="bg-main">
+        <form method="POST" netlify-honeypot="bot-field" data-netlify="true" class="bg-main">
           <div class="text-fields">
-            <input type="text" class="text-input name-input" placeholder="Enter your name" />
-            <input type="email" class="text-input email-input" placeholder="Email Address" />
-            <input type="text" class="text-input phone-input" placeholder="Phone Number" />
-            <input type="text" class="text-input Subject-input" placeholder="Enter the Subject" />
+            <input
+              name="name"
+              type="text"
+              class="text-input name-input"
+              placeholder="Enter your name"
+            />
+            <input
+              name="email"
+              type="email"
+              class="text-input email-input"
+              placeholder="Email Address"
+            />
+            <input
+              name="phone"
+              type="text"
+              class="text-input phone-input"
+              placeholder="Phone Number"
+            />
+            <input
+              name="subject"
+              type="text"
+              class="text-input Subject-input"
+              placeholder="Enter the Subject"
+            />
             <textarea
               rows="8"
               cols="50"
               class="text-input message-input"
               placeholder="Enter the message"
+              name="message"
             ></textarea>
+            <div class="my-2"></div>
+            <div data-netlify-recaptcha="true"></div>
           </div>
           <button type="submit" class="btn-dark">Submit</button>
         </form>
